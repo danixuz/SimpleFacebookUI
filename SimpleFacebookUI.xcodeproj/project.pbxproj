@@ -11,6 +11,8 @@
 		33D30E0B2896D316009A9996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D30E0A2896D316009A9996 /* ContentView.swift */; };
 		33D30E0D2896D317009A9996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D30E0C2896D317009A9996 /* Assets.xcassets */; };
 		33D30E102896D317009A9996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D30E0F2896D317009A9996 /* Preview Assets.xcassets */; };
+		33D30E192896D340009A9996 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D30E182896D340009A9996 /* User.swift */; };
+		33D30E1B2896D4F9009A9996 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D30E1A2896D4F9009A9996 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		33D30E0A2896D316009A9996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		33D30E0C2896D317009A9996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33D30E0F2896D317009A9996 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		33D30E182896D340009A9996 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		33D30E1A2896D4F9009A9996 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,9 @@
 		33D30E072896D316009A9996 /* SimpleFacebookUI */ = {
 			isa = PBXGroup;
 			children = (
+				33D30E172896D329009A9996 /* Models */,
+				33D30E162896D323009A9996 /* Views */,
 				33D30E082896D316009A9996 /* SimpleFacebookUIApp.swift */,
-				33D30E0A2896D316009A9996 /* ContentView.swift */,
 				33D30E0C2896D317009A9996 /* Assets.xcassets */,
 				33D30E0E2896D317009A9996 /* Preview Content */,
 			);
@@ -65,6 +70,23 @@
 				33D30E0F2896D317009A9996 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33D30E162896D323009A9996 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33D30E0A2896D316009A9996 /* ContentView.swift */,
+				33D30E1A2896D4F9009A9996 /* Home.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33D30E172896D329009A9996 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33D30E182896D340009A9996 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				33D30E0B2896D316009A9996 /* ContentView.swift in Sources */,
 				33D30E092896D316009A9996 /* SimpleFacebookUIApp.swift in Sources */,
+				33D30E1B2896D4F9009A9996 /* Home.swift in Sources */,
+				33D30E192896D340009A9996 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
