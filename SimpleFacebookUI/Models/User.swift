@@ -21,7 +21,7 @@ struct User: Identifiable {
 
 
 
-let sampleUsersStory: [User] = [
+let sampleUsers: [User] = [
     User(firstName: "Mark", lastName: "Zuck", picture: "markzuck"),
     User(firstName: "Steve", lastName: "Jobs", picture: "stevejobs"),
     User(firstName: "Giancarlo", lastName: "Esposito", picture: "giancarlo")

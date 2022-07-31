@@ -13,6 +13,9 @@
 		33D30E102896D317009A9996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D30E0F2896D317009A9996 /* Preview Assets.xcassets */; };
 		33D30E192896D340009A9996 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D30E182896D340009A9996 /* User.swift */; };
 		33D30E1B2896D4F9009A9996 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D30E1A2896D4F9009A9996 /* Home.swift */; };
+		33D30E1D2896F6ED009A9996 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D30E1C2896F6ED009A9996 /* Story.swift */; };
+		33D30E1F2896F730009A9996 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D30E1E2896F730009A9996 /* Post.swift */; };
+		33D30E222896F816009A9996 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D30E212896F816009A9996 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		33D30E0F2896D317009A9996 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33D30E182896D340009A9996 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		33D30E1A2896D4F9009A9996 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		33D30E1C2896F6ED009A9996 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		33D30E1E2896F730009A9996 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		33D30E212896F816009A9996 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		33D30E072896D316009A9996 /* SimpleFacebookUI */ = {
 			isa = PBXGroup;
 			children = (
+				33D30E202896F80D009A9996 /* Util */,
 				33D30E172896D329009A9996 /* Models */,
 				33D30E162896D323009A9996 /* Views */,
 				33D30E082896D316009A9996 /* SimpleFacebookUIApp.swift */,
@@ -85,8 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				33D30E182896D340009A9996 /* User.swift */,
+				33D30E1C2896F6ED009A9996 /* Story.swift */,
+				33D30E1E2896F730009A9996 /* Post.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		33D30E202896F80D009A9996 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				33D30E212896F816009A9996 /* Extensions.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +179,10 @@
 				33D30E0B2896D316009A9996 /* ContentView.swift in Sources */,
 				33D30E092896D316009A9996 /* SimpleFacebookUIApp.swift in Sources */,
 				33D30E1B2896D4F9009A9996 /* Home.swift in Sources */,
+				33D30E1F2896F730009A9996 /* Post.swift in Sources */,
 				33D30E192896D340009A9996 /* User.swift in Sources */,
+				33D30E1D2896F6ED009A9996 /* Story.swift in Sources */,
+				33D30E222896F816009A9996 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

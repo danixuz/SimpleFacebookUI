@@ -106,6 +106,35 @@ struct Home: View {
                     .foregroundColor(.white)
                     
                     // MARK: Stories section
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20){
+                            ForEach(sampleStories){ story in
+                                Image(story.picture)
+                                    .resizable()
+                                    .frame(width: 95, height: 120)
+                                    .cornerRadius(20)
+                                    .overlay{
+                                        Circle()
+                                            .foregroundColor(.white)
+                                            .frame(width: 50, height: 50)
+                                            .overlay{
+                                                Image(story.user.picture)
+                                                    .resizable()
+                                                    .clipShape(Circle())
+                                                    .frame(width: 45, height: 45)
+                                            }
+                                            .offset(y: 57)
+                                    }
+                            }
+                        }
+                        .padding(.bottom) // to add more space to the bottom frame so the profile picture won't cut out of the frame
+                        .padding()
+                    }
+                    
+                    Rectangle()
+                        .foregroundColor(Color(.systemGray5))
+                    
+                    // MARK: Posts section
                     
                 }
                 .frame(width: .infinity, height: .infinity)
