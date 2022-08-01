@@ -131,15 +131,102 @@ struct Home: View {
                         .padding()
                     }
                     
-                    Rectangle()
-                        .foregroundColor(Color(.systemGray5))
+                    
                     
                     // MARK: Posts section
+                    ForEach(samplePosts){ post in
+                        Rectangle()
+                            .foregroundColor(Color(.systemGray5))
+                            .frame(height: 5)
+                        Post(post: post)
+                        Rectangle()
+                            .foregroundColor(Color(.systemGray5))
+                            .frame(height: 5)
+                    }
                     
                 }
                 .frame(width: .infinity, height: .infinity)
             }
         }
+    }
+    
+    // MARK: Build post UI for home view from data of a post.
+    @ViewBuilder
+    func Post(post: Post) -> some View{
+        let poster = post.user
+        let fontColor: Color = Color(red: 60/255, green: 60/255, blue: 60/255)
+        VStack( alignment: .leading){
+            // MARK: Name and pfp and time ago
+            HStack{
+                // Name and pfp
+                HStack(spacing: 10){
+                    Image(poster.picture)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                    Text(poster.fullName)
+                        .font(.subheadline)
+                        .foregroundColor(fontColor)
+                }
+                Spacer()
+                // time ago of post
+                Text(post.timeAgo)
+                    .font(.caption)
+                    .foregroundColor(fontColor)
+            }
+            // MARK: Post content
+            Text(post.text)
+                .background(.red)
+                .padding(.vertical, 5)
+            
+            // MARK: Reactions, comments and shares count
+            HStack{
+                // Reactions
+                HStack(spacing: 2.5){
+                    // Like
+                    Circle()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
+                        .overlay{
+                            Image(systemName: "hand.thumbsup.fill")
+                                .resizable()
+                                .frame(width: 12, height: 12)
+                                .foregroundColor(.white)
+                        }
+                    // Love
+                    Circle()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.red)
+                        .overlay{
+                            Image(systemName: "heart.fill")
+                                .resizable()
+                                .frame(width: 12, height: 12)
+                                .foregroundColor(.white)
+                        }
+                        .padding(.horizontal, 6)
+                    // Laugh
+                    Text("😂")
+                        .font(.title)
+                    // Surprised
+                    Text("😲")
+                        .font(.title)
+                    // Sad
+                    Text("😪")
+                        .font(.title)
+                    // Angry
+                    Text("😡")
+                        .font(.title)
+                }
+                Spacer()
+                // Comments and shares count
+                HStack{
+                    
+                }
+            }
+        }
+        .padding()
+        .background(.green)
     }
 }
 
