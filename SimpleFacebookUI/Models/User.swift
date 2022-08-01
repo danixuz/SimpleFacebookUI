@@ -24,5 +24,6 @@ struct User: Identifiable {
 let sampleUsers: [User] = [
     User(firstName: "Mark", lastName: "Zuck", picture: "markzuck"),
     User(firstName: "Steve", lastName: "Jobs", picture: "stevejobs"),
-    User(firstName: "Giancarlo", lastName: "Esposito", picture: "giancarlo")
+    User(firstName: "Giancarlo", lastName: "Esposito", picture: "giancarlo"),
+    User(firstName: "Lebron", lastName: "James", picture: "lebronjames")
 ]

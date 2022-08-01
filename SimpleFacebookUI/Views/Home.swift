@@ -94,7 +94,7 @@ struct Home: View {
                         .cornerRadius(10)
                         
                         HStack(spacing: 10){
-                            Image(systemName: "bell.fill")
+                            Image(systemName: "video.fill")
                             Text("Live")
                                 .font(.caption)
                         }
@@ -139,13 +139,42 @@ struct Home: View {
                             .foregroundColor(Color(.systemGray5))
                             .frame(height: 5)
                         Post(post: post)
-                        Rectangle()
-                            .foregroundColor(Color(.systemGray5))
-                            .frame(height: 5)
                     }
+                    
+                    // MARK: Image post placeholder
+                    Rectangle()
+                        .foregroundColor(Color(.systemGray5))
+                        .frame(height: 5)
+                    VStack{
+                        HStack{
+                            // Name and pfp
+                            HStack(spacing: 10){
+                                Image(sampleUsers[0].picture)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 35, height: 35)
+                                    .clipShape(Circle())
+                                Text(sampleUsers[0].fullName)
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                            }
+                            Spacer()
+                            // time ago of post
+                            Text("5 hour")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
+                        .padding([.horizontal, .top])
+                        Image("story5")
+                            .resizable()
+//                            .aspectRatio(contentMode: .fill)
+                            .frame(maxWidth: .infinity, maxHeight: 200)
+                    }
+                    
                     
                 }
                 .frame(width: .infinity, height: .infinity)
+                
             }
         }
     }
@@ -163,10 +192,10 @@ struct Home: View {
                     Image(poster.picture)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 40, height: 40)
+                        .frame(width: 35, height: 35)
                         .clipShape(Circle())
                     Text(poster.fullName)
-                        .font(.subheadline)
+                        .font(.footnote)
                         .foregroundColor(fontColor)
                 }
                 Spacer()
@@ -177,16 +206,17 @@ struct Home: View {
             }
             // MARK: Post content
             Text(post.text)
-                .background(.red)
+//                .background(.red)
+                .font(.subheadline)
                 .padding(.vertical, 5)
             
             // MARK: Reactions, comments and shares count
             HStack{
                 // Reactions
-                HStack(spacing: 2.5){
+                HStack(spacing: 3){
                     // Like
                     Circle()
-                        .frame(width: 25, height: 25)
+                        .frame(width: 22, height: 22)
                         .foregroundColor(.blue)
                         .overlay{
                             Image(systemName: "hand.thumbsup.fill")
@@ -196,7 +226,7 @@ struct Home: View {
                         }
                     // Love
                     Circle()
-                        .frame(width: 25, height: 25)
+                        .frame(width: 22, height: 22)
                         .foregroundColor(.red)
                         .overlay{
                             Image(systemName: "heart.fill")
@@ -204,29 +234,39 @@ struct Home: View {
                                 .frame(width: 12, height: 12)
                                 .foregroundColor(.white)
                         }
-                        .padding(.horizontal, 6)
+                        .padding(.leading, 4.5)
+                        .padding(.trailing, 3)
+                        .overlay{
+                            Circle()
+                                .foregroundColor(.red)
+                                .frame(width: 5, height: 5)
+                                .offset(x: 1,y: 19)
+                        }
                     // Laugh
                     Text("😂")
-                        .font(.title)
+                        .font(.title2)
                     // Surprised
                     Text("😲")
-                        .font(.title)
+                        .font(.title2)
                     // Sad
                     Text("😪")
-                        .font(.title)
+                        .font(.title2)
                     // Angry
                     Text("😡")
-                        .font(.title)
+                        .font(.title2)
                 }
                 Spacer()
                 // Comments and shares count
                 HStack{
-                    
+                    Text("\(post.commentCount.roundedWithAbbreviations) Comments")
+                    Text("\(post.shareCount.roundedWithAbbreviations) Shares")
                 }
+                .font(.caption)
+                .foregroundColor(fontColor)
             }
         }
         .padding()
-        .background(.green)
+//        .background(.green)
     }
 }
 

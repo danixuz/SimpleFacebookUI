@@ -16,6 +16,8 @@ struct Story: Identifiable{
 
 var sampleStories: [Story] = [
     Story(user: sampleUsers[0], picture: "story1"),
-    Story(user: sampleUsers[1], picture: "story2"),
-    Story(user: sampleUsers[2], picture: "story3")
+    Story(user: sampleUsers[3], picture: "story4"),
+    Story(user: sampleUsers[2], picture: "story3"),
+    Story(user: sampleUsers[1], picture: "story2")
+    
 ]
